@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Ingreso } from '../ingresos/ingreso.model';
 import { IngresoService } from '../ingresos/ingreso-service';
 import { EgresoService } from '../egresos/egreso-service';
+import { Egreso } from '../egresos/egreso.model';
 
 @Component({
   selector: 'app-formulario',
@@ -32,8 +33,12 @@ export class Formulario {
           new Ingreso(this.descripcionInput, this.valorInput)
         );
       } else {
-
+        this.egresoServicio.egresos.push(
+          new Egreso(this.descripcionInput, this.valorInput)
+        );
       }
+    } else {
+      console.log("Introduce valores válidos");
     }
   }
 }
