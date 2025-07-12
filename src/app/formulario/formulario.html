@@ -20,7 +20,6 @@
           placeholder="Descripción"
           required
           [(ngModel)]="descripcionInput" name="descripcionInput"
-
           [ngClass]="{'bg-danger': tipo === 'egresoOperacion',
             'bg-success': tipo === 'ingresoOperacion'}"
         />
@@ -31,6 +30,7 @@
           class="form-control border-success"
           placeholder="Valor"
           required
+          [(ngModel)]="valorInput" name="valorInput"
           [ngClass]="{'bg-danger': tipo === 'egresoOperacion',
             'bg-success': tipo === 'ingresoOperacion'}"
         />

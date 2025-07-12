@@ -40,5 +40,9 @@ export class Formulario {
     } else {
       console.log("Introduce valores válidos");
     }
+
+    // Reiniciamos los valores de los campos
+    this.descripcionInput = null;
+    this.valorInput = null;
   }
 }
